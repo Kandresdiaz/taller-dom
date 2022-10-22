@@ -1,74 +1,5 @@
-/*  creamos un arrays  para las notas del estudiante*/
-/* let notasArray=[]
-let promedio */
-/* funcion */
-/* const notasActuales = (notas) => 
-{
-    while(notas <0 || notas >5){
-        notas = +prompt("ingrese otra vez la nota");
-    }
-    notasArray.push(notas)
-}  */
-/* 
-for (let i = 0; i < 4; i++) { */
-    /* formas de concatenar */
-    /* let notas = prompt("ingrese la nota"+ i+1) */
-/*     let notas = +prompt(`ingre su nota ${i+1}`)
-    notasActuales(notas)  
-} */
 
-/* console.log(notasArray)
-
-const sumaDeNotas= (array) =>
-{
-    promedio= array.reduce((a,b) => a+b)/array.length
-
-} */
-/* metodos de el arrays */
-/* push:agrega datos al final del array */
-/* pop:elimina el ultimo dato del array */
-/* unshift:agrega al array */
-/* shift:agrga elemntos al array */
-/* sort:ordena el array */
-/* reverse: voltear el array */
-
-// window.onload= function()
-// {
-//     document.querySelector("#sumar").onclick= sumar
-//     document.querySelector("#restar").onclick= restar
-//     document.querySelector("#multiplicar").onclick= multiplicar
-//     document.querySelector("#dividir").onclick= dividir
-// }
-
-// function sumar()
-// /* queryselector es un selector Css y trae el primero elemento que tenga relacion con eso */
-// {
-//     let valorUno=+(document.querySelector('#valorUno').value) 
-//     let valorDos= parseInt(document.getElementById('valorDos').value)
-//     document.getElementById('resultado').innerHTML=valorUno+valorDos
-// }
-// function restar()
-// {
-//     let valorUno= parseInt(document.getElementById('valorUno').value) 
-//     let valorDos= parseInt(document.getElementById('valorDos').value)
-//     document.getElementById('resultado').innerHTML=valorUno-valorDos   
-// }
-// function multiplicar()
-// {
-//     let valorUno= parseInt(document.getElementById('valorUno').value) 
-//     let valorDos= parseInt(document.getElementById('valorDos').value)
-//     document.getElementById('resultado').innerHTML=valorUno*valorDos
-// }
-// function dividir()
-// {
-//     let valorUno= parseInt(document.getElementById('valorUno').value) 
-//     let valorDos= parseInt(document.getElementById('valorDos').value)
-//     document.getElementById('resultado').innerHTML=(valorUno/valorDos).toFixed(3)
-// }
-// function caulcularboton(){
-//     document.querySelector("#resultado").value=resultado
-// }
-/* ejemplo 1: creando lista HTML con un arra */
+/* ejm1: creando lista HTML con un array */
 const opciones= ['Modulo 1','Modulo 2','Modulo 3','Moldulo 4']
 
 function generarListaOrdenada(vec)
@@ -80,14 +11,14 @@ function generarListaOrdenada(vec)
     }
     function fin()
     {
-        s=  s +'<ol>'
+        s=  s +'</ol>'
     }
-    /* ejecutar funcion comienzo */
+    // corre funcion comienzo
     comienzo()
     /* llenar la lista <ol> */
-   for (let f = 0; f < vec.length; f++) 
+   for (let x = 0;x< vec.length; x++) 
    {
-        s = s +'<li>' + vec[f] +'</li>'
+        s = s +'<li>' + vec[x] +'</li>'
    }
    /* ejecutar la funcion fin */
    fin()
@@ -96,62 +27,33 @@ function generarListaOrdenada(vec)
 }
 
 document.getElementById('div1').innerHTML= generarListaOrdenada(opciones)
-/* ejemplo 2: creando div con un array  */
+// ejm2: creando un div con array 
 const numPrueba =[2,4,6,8,10,12]
 function prueba(arrayLista) 
 {
-    let v=''
+    let x=''
     for (let index = 0; index < arrayLista.length; index++) 
     {
-       v += '<div>' + arrayLista[index] +'</div>'      
+       x += '<div>' + arrayLista[index] +'</div>'      
     }
-    return v
+    return x
 }
 document.getElementById('array1').innerHTML= prueba(numPrueba)
-/* opcion 2 */
-/* const mtdMostrar = () => 
-{
-    numPrueba.forEach((valor, i)=>
-    {
-        alert("numero" +i+"["+valor+"]")
-    })
-}
-mtdMostrar();
- */
-/* opcion 3 */
-/* function mostrarDom(elemento, arr) 
-{
-    for (let index = 0; index < arr.length; index++) 
-    {
-        document.getElementById(elemento).innerHTML+= '<div>' ${arr[index]} '</div>'
-    }  
-    /* opcion 4 */ 
-  /*   arr.array.forEach(valor => 
-    {
-        document.getElementById(elemento).innerHTML+='<div>'
-    }); 
-}  */
-/* ///////////////////////////////////////////////////// */
-/* componentes de formulario */
-/* una funcion para capturar dos datos de caja de texto */
 
-
-// ejercicio 1 
-// entradas
 
 let result
 function formaSumar() 
 {
     let numUno = document.getElementById("n1").value
-    numDos = document.getElementById("n2") .value
-    result = parseInt(num1) + parseInt(num2)
+    let numDos = document.getElementById("n2") .value
+    result = parseInt(numUno) + parseInt(numDos)
 }
 // salida
 function calcular1()
 {
     document.querySelector("#result").value=result
 }
-/* ejercicio 2 la calculadora */
+// calculadora 2 
 function calcular() 
 {
     let numUno = document.getElementById("n1").value
@@ -201,7 +103,6 @@ function calcularBoton()
 {
     document.querySelector("#resul").value=resul
 }
-/* //////////////////////////////////////////////// */
 // cuenta regresiva
 /* ejercicio 3 */
 function CuentaRegre(numr){    
@@ -231,41 +132,27 @@ function capturarDato(){
         }
     }     
 }
-/* ////////////////////////////////////////////////// */
-/* ejecicio 7 */
-let color= document.getElementById('select1')
-function cambiarColor() 
-{
-    document.getElementById('text1').value = color.selectedIndex
-    document.getElementById('text2').value = color.options[color.selectedIndex].text
-    document.getElementById('text3').value = color.options[color.selectedIndex].value
-    let valuecolor = color.options[color.selectedIndex].value
-    document.getElementById('valuecolor').value = ("#"+valuecolor)  
-    
-}
+
 /*  el evenentlistener es el que esta pendiente de los eventos o agregar eventos*/
 color.addEventListener('change', cambiarColor )
-/* ///////////////////////////////////// */
-/* ejercicio 5 textarea */
+/* ejercicio 5 */
 const controlarCaracteres = () =>
 {
     let tamTextarea = document.getElementById('description')
     if (tamTextarea.value.length == 0) {
         alert('campo de texto vacío')
-        
     }else if (tamTextarea.value.length > 50) {
         alert(' Texto debe ser de 50max')
-        
     }else
     {
         alert(' Tamaño de texto correcto')
-
     }
 }
 /* funcion caracteres */
 let boton= document.getElementById('btnTextArea')
 boton.addEventListener("click", controlarCaracteres)
-/* ///////////////////////////////////////////////// */
+
+
 // Ejercicio 6 - validar tamaño de caracteres / password field
 function verificar(){
     let clave = document.getElementById('clave').value;
@@ -279,8 +166,18 @@ function verificar(){
 let btn1 =  document.querySelector("#btnPss");
 btn1.addEventListener('click',verificar);
 
-////////////////////////////////////////////////////////////////////////////////////////
+/* ejecicio 7 */
+let color= document.getElementById('select1')
+function cambiarColor() 
+{
+    document.getElementById('text1').value = color.selectedIndex
+    document.getElementById('text2').value = color.options[color.selectedIndex].text
+    document.getElementById('text3').value = color.options[color.selectedIndex].value
+    let valuecolor = color.options[color.selectedIndex].value
+    document.getElementById('valuecolor').value = ("#"+valuecolor)     
+}
 // Ejercicio 7 - select
+
 let slcBox = document.getElementById('select1');
 
 function cambiarColor(){
@@ -290,11 +187,8 @@ function cambiarColor(){
     let valuecolor=  slcBox.options[slcBox.selectedIndex].value;
     document.getElementById('valueColor').value = ("#"+valuecolor);
 }
-
 slcBox.addEventListener('change',cambiarColor);
 
-
-// ////////////////////////////////////////////////////////////////////////////////////////
 // Ejercicio 8 - checkbox
 
 function alertaCheck(checkItem){
@@ -319,7 +213,7 @@ function alertaCheck(checkItem){
  let btn2 = document.getElementById("btnChk");
  btn2.addEventListener('click', contarSeleccionados);
 
-// ////////////////////////////////////////////////////////////////////////////////////////
+
 // Ejercicio 9 Text area - tamaño de caracteres
 
 const fnControlaCaracteres = () =>{
@@ -337,7 +231,7 @@ const fnControlaCaracteres = () =>{
 let btn3 = document.getElementById('btnTextArea');
 btn3.addEventListener('click',fnControlaCaracteres);
 
-// ////////////////////////////////////////////////////////////////////////////////////////
+
 // Ejercicio 10 Expresiones regulares - validación tipo caracteres
 let patronLetra = /^[a-zA-Z]/;
 let patronVocal = /[aeiouAEIOUáéíóú]/;
@@ -350,7 +244,7 @@ let palabra = document.getElementById('txtCar').value;
         // alert('--> Texto contiene Letra y contiene una vocal');
         document.getElementById("rtaRegular").innerHTML=texto1;
     }else{
-        // alert('--> Texto NO contiene Letra o NO contiene una vocal');
+      
         document.getElementById("rtaRegular").innerHTML=texto2;
     }
 }
@@ -358,9 +252,11 @@ let palabra = document.getElementById('txtCar').value;
 let btn4 = document.getElementById('btnRegular');
 btn4.addEventListener('click', validarLetras);
 
-// Ejemplo 2 - Letra+Vocal+número+longitud
-// let patronLetras = /[a-zA-Z][aeiouAEIOUáéíóú]/;
+// Ejemplo 2 - 
+// Letra+Vocal+número+longitud// let patronLetras = /[a-zA-Z][aeiouAEIOUáéíóú]/;
 // validación sólo tipo alfanumericos:
+
+
 let patronLetras= /^[a-zA-Z0-9]*$/;
 let patronNumeros = /[0-9]{1}/;
 let texto3 = '--> Correcto!';
@@ -382,12 +278,13 @@ btn5.addEventListener('click', validarCajaTexto);
 
 // Ejemplo 3 - número telefonico 607-6303030
 // let patronTel = /^[607]{3}\d{7}$/;
-let patronTel = /^607\d{7}$/;
-let texto5 = '--> Número debe iniciar 607 y contener 10 digitos';
+
+let patronTelefono = /^607\d{7}$/;
+let texto5 = '--> el Número debe iniciar 607 y contener 10 digitos';
 
 function validarTelefono(){   
 let entradaTel = document.getElementById('txtNumber').value;
-    if(patronTel.test(entradaTel)){
+    if(patronTelefono.test(entradaTel)){
         document.getElementById("rtaRegular3").innerHTML=texto3;
     }else{
         document.getElementById("rtaRegular3").innerHTML=texto5;
@@ -396,17 +293,18 @@ let entradaTel = document.getElementById('txtNumber').value;
 
 let btn6 = document.getElementById('btnRegular3');
 btn6.addEventListener('click', validarTelefono);
+
+// *********valida numeros decimales 
 // validación para entrada de números decimales: /^[0-9]+\.?[0-9]*$/
 // comprobar si una cadena es un número escribiremos: /^\d$/
 
-// ////////////////////////////////////////////////////////////////////////////////////////
-// Ejercicio 11 - Keypress
+// Ejercicio 11 :Keypress
 
-// El siguiente ejemplo muestra una alerta en pantalla cada vez que ingreso un caracter en la caja de texto
+// cada vez que se ingresa un caracter da una alerta 
 let teclaPres = document.getElementById("text");
 let resultado = document.getElementById("rtaTeclado");
 
-// Ejemplo 3: El siguiente ejemplo muestra el texto escrito en el input:text en la etiqueta div al presionar la tecla ENTER (consultar keycode list)
+// Ejemplo 3: El siguiente ejemplo muestra el texto escrito en el input:text en la etiqueta div al presionar la tecla enter (consultar keycode list)
 window.addEventListener("keypress", function(evento){
     if(evento.keyCode == 13){
         resultado.innerHTML = teclaPres.value
@@ -422,20 +320,9 @@ const fnCaracteres = ()=>{
 
 document.getElementById("tamText").addEventListener("keyup",fnCaracteres);
 
-// ////////////////////////////////////////////////////////////////////////////////////////
+
 // Ejercicio 12. crear nodos
 
-// mostrando ejemplo de los apuntes .doc
-// function fnAgregarLista(){
-//     const node = document.createElement('li');
-//     const nuevoTexto= document.createTextNode("water");
-//     node.appendChild(nuevoTexto);
-//     document.getElementById("myList").appendChild(node)
-// }
-
-// let cualquiernombre= document.getElementById("btnadd");
-// cualquiernombre.addEventListener('click',fnAgregarLista);
-//////////////////////////////////////////////////
 const nuevoElemento = document.createElement("p");
 
 // creamos un nodo de texto
@@ -446,7 +333,7 @@ const nuevoNodo = nuevoElemento.appendChild(nuevoTexto)
 // opción 2
 // nuevoElemento.appendChild(nuevoTexto)
 
-//crear un nuevo nodo
+//crear nodo nuevo
 function fnCrear(){
     // document.getElementById("nuevoTexto").appendChild(nuevoElemento);
     let contenedor = document.getElementById("nuevoTexto");
@@ -473,10 +360,8 @@ btn8.addEventListener('click', fnEliminar);
 let btn9 = document.getElementById('btnCopiar');
 btn9.addEventListener('click', fnCopiar);
 
-
-// ////////////////////////////////////////////////////////////////////////////////////////
-// Ejercicio 13. Manipulación de imágenes
-// console.log(document.images); //IMPRIMIR NÚMERO DE IMÁGENES
+//ejem13: Manipulación de imágenes
+ //IMPRIMIR NÚMERO DE IMÁGENES
 const imgUno = document.querySelector("#imgU");
 const imgDos = document.querySelector("#imgD");
 const imgTres = document.querySelector("#imgT");
@@ -489,23 +374,21 @@ function muestra(num) {
 }
 
 imgUno.addEventListener("click",()=> muestra('primera'));
-imgDos.addEventListener("click",()=> muestra(2));
-imgTres.addEventListener("click",()=> muestra(3));
+imgDos.addEventListener("click",()=> muestra('segunda'));
+imgTres.addEventListener("click",()=> muestra('tercera'));
 imgCuatro.addEventListener("click",()=> muestra(4));
 
-
-// ////////////////////////////////////////////////////////////////////////////////////////
-// Ejercicio 14. Crear una lista de elementos
+// Ejm:14. Crear una lista de elementos
 let listaElementos = document.querySelector("#elementos");
 
 // mostrar un elemento de la lista en particular
 // console.log(listaElementos.children[2]);
 // listaElementos.children[2].style.backgroundColor = "green";
 
-//--Enviar el evento submit
+//Enviar el evento submit
 let form = document.querySelector("#frmLista");
 form.addEventListener("submit", fnAgregarElemento);
-//--Enviar Eliminar evento
+// Eliminar evento
 listaElementos.addEventListener("click", fnEliminarElemento);
 
 // Listado de funciones
@@ -513,12 +396,12 @@ function fnAgregarElemento(evento){
     evento.preventDefault();
     // capturar el valor de la caja de texto
     let newElement = document.getElementById("txtElemento").value;
-//    
+  
     // crear un nuevo elemento de lista li
     let li = document.createElement("li");
     // crear un nuevo elemento de botón
     let btnDelete = document.createElement("button");
-//    
+   
     // agregar elementos a las clases
     li.className = "list-group-item";
     btnDelete.className = "btn btn-light btn-outline-danger btn-sm float-end delete"
@@ -532,9 +415,7 @@ function fnAgregarElemento(evento){
 }
 
 function fnEliminarElemento(evento){
-    // comprobar los elementos de la clase 'delete'
     if(evento.target.classList.contains("delete")){
-        // mostrar en pantalla mensaje de confirmación
         if(confirm("¿Seguro de eliminar Elemento?")){
             let li = evento.target.parentElement;
             listaElementos.removeChild(li);
