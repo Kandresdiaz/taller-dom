@@ -7,38 +7,12 @@
     <meta name="author" content="nombre">
     <meta name="description" content="aprenidendo fundamentos con coex">
     <meta name="keywords"  content="Aprende logica html,css,javascript,BD,vue,js,laravel">
-    <link rel="stylesheet" href="./ejercicio.css">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>DOM</title>
 </head>
-<body>
-    
-    <!-- <h1 class="text-center">calculadora</h1>
-     -->
-    <!-- <form action="" id="formulario">
-        <label for=""> Numero 1</label>
-        <input type="number" name="" id="valorUno" placeholder="Escribe un numero">
-        boton para limpiar los datos que ingresen
-        <input type="reset" value="borrar">
-        <br><br>
-        segunda caja
-        <label for=""> Numero 2</label>
-        <input type="number" name="" id="valorDos" placeholder="Escribe el segundo numero">
-        <br><br>
-        boton para sumar
-        <button type="button" onclick="sumar()">Sumar</button>
-        boton para restar
-        <button type="button" onclick="restar()">Restar</button>
-        boton para multiplicar
-        <button type="button" onclick="multiplicar()">multiplicar</button>
-        boton para dividir
-        <button type="button" onclick="dividir()">Dividir</button>
-        mostar el resultado
-        <p>El resultado es: <span id="resultado"></span></p>
-    </form> -->
-    <!-- <br><br>
-    <hr> -->
+<body class="text-center">
+     
     <!-- ejercicio de clase  -->
     <header class="header">
         <h1 class="ejemplo">Fundamentos de javascript</h1>
@@ -67,21 +41,19 @@
         <label for="formRes">Resultado:</label>
         <input type="text" id="result" placeholder="Resultado">
     </form>
-    <!-- //////////////////////////////////////////////////// -->
     <br><br>
     <hr>
     <h2 class="text-center">ejercicio 2</h2>
     <h3 class="ejercicio">Ejercicio Calculadora</h3>
-    <form class="formSuma">
+    <form class="formSuma ">
         <label for="formRes">Resultado:</label>
         <input type="text" id="resul" placeholder="Resultado" disabled>
         <label for="n1">Número 1</label>
         <input type="number" name="" id="nUno" required/>
         <label for="n1">Número 2</label>
         <input type="number" name="" id="nDos" required/>
-        <div class="botones">
+        <div class="botones mt-4">
             <!-- boton para sumar -->
-            
             <button type="button" class="btn btn-info" id="sumar" >+</button>
             <!-- boton para restar -->
             <button type="button" class="btn btn-info" id="restar">-</button>
@@ -91,11 +63,11 @@
             <button type="button" class="btn btn-info" id="dividir" >/</button>
             <button type="reset" class="btn btn-success">Limpiar</button>
         </div>
-        <button type="button" class="btn btn-info" onclick="calcularBoton()" >Calcular</button>
+        <button type="button" class="btn btn-info mt-4" onclick="calcularBoton()" >Calcular</button>
     </form>
     <hr>
     <br>
-    <!-- ejemplo setTimeout--cuenta regresiva -->
+ <!-- //cuenta regresiva -->
     <h3>Ejercicio 3</h3>
     <div class="regresiva">
         <label for="numRegresiva">Número</label>
@@ -120,16 +92,18 @@
     <hr>
     <section>
 
-        <h2 class="ejercicio">Ejercicio 5 -textarea</h2>
+        <h2 class="ejercicio ">Ejercicio 5 <br> textarea</h2>
+        <br>
         <label for="description">Descripcion</label>
-        <!-- control textarea -->
+        <!-- control tex-tarea -->
         <textarea name="" id="description" cols="100" rows="5" required></textarea>
-        <!-- btn validart -->
+        <!-- btn para validar -->
         <input type="button" id="btnTextArea" class="btn btn-drak btn-outline-danger " value="validar">
     </section>
     <hr>
         <div>
-            <!-- Ejercicio 6 - validar tamaño de caracteres -->
+            <!-- Ejercicio 6 - 
+            validar tamaño de caracteres -->
             <h4>Ejercicio 6</h4>
             <div class="ejemplos">                
                 <label for="pss">Contraseña:</label>
@@ -155,29 +129,33 @@
                 <label for="text3">Color Value selected:</label>
                 <input type="text" name="" id="text3" placeholder="valor Seleccionado">
                 <input type="color" name="" id="valueColor">
-                <br>
-
+                <br><br>
                 <h4>Ejercicio 8 - checkbox</h4>
+                <br>
                 <label for="chkEjemplo">input check Example:</label>
                 <input type="checkbox" name="chkEjemplo" id="chkEjemplo" onchange="alertaCheck(this);">
                 <p id="txtImpresion"></p>
 
                 <br>
-                <label for="">8.1 input check items:</label>
+                <section class="">
+                    
+                <label for="">input check items:</label>
                 <label for="chk1">JavaScript <input type="checkbox" name="" id="chk1"></label>
                 <label for="chk2">HTML/CSS <input type="checkbox" name="" id="chk2"></label>
                 <label for="chk3">Python <input type="checkbox" name="" id="chk3"></label>
                 <label for="chk4">JAVA <input type="checkbox" name="" id="chk4"></label>
                 <label for="chk5">PHP <input type="checkbox" name="" id="chk5"></label>
                 <input id="btnChk" type="button" class="btn btn-dark" value="Validar">
-    <br>
-                <h4>Ejercicio 9 - textarea</h4>
+                
+                </section>
+                <br><br>
+                <h4>Ejercicio 9</h4>
 
                 <label for="description">Descripción</label>
                 <!-- control textarea -->
                 <textarea name="" id="description" cols="100" rows="5" required></textarea>
                 <!-- btn validar -->
-                <input id="btnTextArea" type="button" class="btn btn-dark btn-outline-danger" value="Validar">
+                <input id="btnTextArea" type="button" class="btn btn-dark btn-outline-danger" value="Validar" >
     <br>
                 <h4>Ejercicio 10</h4>
                 <p class="fs-3">Expresiones regulares</p>
@@ -191,6 +169,7 @@
                 <p id="rtaRegular2"></p>
                 <input id="btnRegular2" type="button" class="btn btn-primary" value="Validar">
     <br>
+                <!-- ejemplo del telefono -->
                 <label for="txtNumber">Ejemplo Expresión regular: Números</label>
                 <input type="number" name="" id="txtNumber" placeholder="ingrese número">
                 <p id="rtaRegular3"></p>
@@ -204,12 +183,12 @@
                 <label for="text">Ingrese un texto:</label>
                 <input type="text" name="" id="text">
                 <div id="rtaTeclado"></div>
-                <p>Ejemplo muestra una alerta en pantalla cada vez que ingreso un caracter en la caja de texto</p>
+                <p><u> Ejemplo muestra una alerta en pantalla cada vez que ingreso un caracter en la caja de texto</u></p>
             </div>
             <div class="ejemplos">
-                <label for="text">11.3 Evento keyup Ingrese un texto (max 50 caracteres):</label>
+                <label for="text"><u>11.3 Evento keyup Ingrese un texto (max 50 caracteres):</u></label>
                 <input type="text" id="tamText">
-                <!-- <input type="text" id="tamText" size="60" maxlength="50"> -->
+                <!-- <input type="text" id="tamText" size="60" maxlength="50"> permite una cantidad maxima de 50 dentro del texto -->
                 <p>Cantidad de caracteres disponibles: <span id="cantidad" style="color:red;">50</span></p>
             </div>
         </div>
@@ -255,7 +234,8 @@
                 <img class="rounded" onclick="muestra('segunda')" name="segunda"src="./images/pc_keyboard.jpg"/>
                 <img class="rounded" name="tercera" onclick="muestra('tercera')" src="./images/pc_laptops.jpg"/>
                 <img class="rounded" onclick="muestra(4)" src="./images/webDesign.jpg"/>
-                <!-- opción 2 -->.
+               
+                <!-- opcion 2 -->
                 <!-- <img id="imgU" name="primera" src="./images/gal5.jpg" />
                 <img id="imgD" src="./images/pc_keyboard.jpg"/>
                 <img id="imgT" src="./images/pc_laptops.jpg"/>
@@ -293,4 +273,8 @@
     <br><br><br>      
     <script src="./ejercicio.js"></script>
  </body>
+ <footer>
+    Kevin Andres Diaz Rincon 
+
+ </footer>
 </html>
